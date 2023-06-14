@@ -12,14 +12,14 @@ app.use(cors());
 app.use(morgan('tiny'));
 app.disable('x-powered-by');
 
-const port = 8000;
+const port = 8080;
 
 // http request
 app.get('/', (req, res) => {
     res.status(201).json("Home get request");
 });
 
-app.use('/api', router)
+app.use('/api', router);
 
 connect().then(() => {
     try {
